@@ -1,0 +1,106 @@
+.team {
+  background-color: $secondary-bg-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.team__title {
+  @extend %_title;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+    font-weight: 700px;
+    font-size: 36px;
+    line-height: 1.17;
+  }
+}
+
+.team__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  @media screen and (max-width: 479px) {
+    flex-direction: column;
+  }
+}
+
+
+.team__item {
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 90px) / 4);
+  }
+}
+
+.team__content {
+  display: block;
+  background-color: $white-color;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: $box-shadow;
+}
+
+.team__name {
+  margin-top: 30px;
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+
+.team__position {
+  padding-bottom: 16px;
+
+  color: $text-color;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+
+.team__social-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 30px;
+  }
+}
+
+.team__social-item + .team__social-item {
+  margin-left: 10px;
+}
+
+.team__social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background-color: $white-color;
+  border-radius: 50%;
+  transition: background-color $transition-animation;
+
+  &:hover {
+    background-color: $accent-color;
+  }
+}
+
+.team__social-icon {
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
+  transition: fill $transition-animation;
+}
+
+.team__social-link:hover .team__social-icon {
+  fill: $white-color;
+}
